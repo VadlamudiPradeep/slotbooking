@@ -1,4 +1,5 @@
 
+
 let slotBooking = require('../models/slotBooking');
 
 let sloBook = async(req,res)=>{
@@ -22,4 +23,14 @@ slotBooking.findOne({where:{date , startTime,endTime}}).then((existedSlot)=>{
     }
 };
 
-module.exports = {sloBook};
+let slotGet = async(req,res)=>{
+    try{
+      let slot = await slotBooking.findAll();
+      return res.status(200).send({response:slot , message:'slots are fetched successfully'})
+    }catch(err){
+
+        return res.status(500).send({messsage:'Internal error'})
+    }
+}
+
+module.exports = {sloBook , slotGet};
