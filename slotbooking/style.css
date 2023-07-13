@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0894eb;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+#slot-form {
+  margin: 20px auto;
+  width: 300px;
+  perspective: 1000px; /* Set the perspective for 3D effect */
+
+}
+
+#slot-form h2 {
+  transform: rotateX(-20deg); /* Apply a rotation on the X-axis */
+  transition: transform 0.5s; /* Add transition for smooth animation */
+}
+
+#slot-form form {
+  transform-style: preserve-3d; /* Preserve the 3D effect on child elements */
+}
+
+#slot-form label,
+#slot-form input,
+#slot-form button {
+  display: block;
+  margin-bottom: 10px;
+  transform: translateZ(0); /* Initialize Z-axis translation to 0 */
+  transition: transform 0.5s; /* Add transition for smooth animation */
+}
+
+#slot-form button {
+  padding: 5px 10px;
+  background-color: #1948ca; /* Set initial background color */
+  transition: background-color 0.3s; /* Add transition for color change */
+}
+
+#slot-form button:hover {
+  background-color: #e50f96; /* Change background color on hover */
+  cursor: pointer;
+}
+
+#slot-form.active h2 {
+  transform: rotateX(0); /* Apply animation to rotate to original position */
+}
+
+#slot-form.active label,
+#slot-form.active input,
+#slot-form.active button {
+  transform: translateZ(50px); /* Apply animation to translate on Z-axis */
+}
+
+#slot-form.active button {
+  background-color: #26f714; /* Change background color on animation */
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slot Availability</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Slot Availability</h1>
+
+  <div id="slot-form">
+    <h2>Create Slot</h2>
+    <form id="create-slot-form">
+      <label for="date">Date:</label>
+      <input type="date" id="date" placeholder="D/M/Y" required>
+
+      <label for="start-time">Start Slot:</label>
+      <input type="time" id="start-time" placeholder="HH:MM" required>
+
+      <label for="end-time">End Slot:</label>
+      <input type="time" id="end-time" placeholder="HH:MM" required>
+
+      <button>Create</button>
+    </form>
+  </div>
+
+  <div id="slot-list">
+    <h2>Slot List</h2>
+    <ul id="slot-list-items"></ul>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="script.js"></script>
+</body>
+</html>
