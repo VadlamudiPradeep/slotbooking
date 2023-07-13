@@ -1,10 +1,9 @@
 let Sequelize = require('sequelize');
 let dotenv = require('dotenv');
 dotenv.config()
-const NAME = process.env.NAME;
-console.log(NAME)
 
-let sequelize = new Sequelize('slotbooking' , 'root', '1qaz2wsx3edc',{
+
+let sequelize = new Sequelize(process.env.NAME , process.env.USERNAME, process.env.PASSWORD,{
     dialect:'mysql',
     host:'localhost'
 });
